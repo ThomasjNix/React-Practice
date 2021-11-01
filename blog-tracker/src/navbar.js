@@ -6,7 +6,10 @@ const Navbar = () => {
             <h1>The Blog Tracker</h1>
             <ul className="links">
                 <li href="/">Home</li>
-                <li href="/create">New Blog</li>
+                <li href="/create" style={{
+                    color: "white",
+                    backgroundColor: "red"
+                }}>New Blog</li>
             </ul>
         </nav>
     )
