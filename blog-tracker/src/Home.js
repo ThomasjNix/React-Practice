@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
 
 const Home = () => {
@@ -28,6 +28,17 @@ const Home = () => {
             id: 3
         }
     ]);
+
+    /**
+     * useEffect runs every time there is a re-render, or every time data changes
+     * When data is retrieved on this hook, it's called a side effect in React
+     * 
+     * By providing an array as the second argument, any properties provided will be 
+     * watched for updates and useEffect() will trigger on the updates of those values
+     */
+    useEffect(() => {
+        console.log('Blogs updated');
+    }, [blogs]);
 
     /**
      * Functions can be passed as props to child components 
