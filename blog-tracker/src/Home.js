@@ -3,7 +3,6 @@ import { useState } from 'react';
 import BlogList from './BlogList';
 
 const Home = () => {
-
     /**
      * The useState method from React allows accessing state from the component
      * In this example, useState accepts a value (that is assigned to the destructured name variable)
@@ -29,10 +28,20 @@ const Home = () => {
             id: 3
         }
     ]);
+
+    /**
+     * Functions can be passed as props to child components 
+     * This allows values on the parent component to be modified
+     * through the child component via closure
+     */
+     const handleDelete = (id) => {
+        setBlogs(blogs.filter((blog) => blog.id !== id));
+    }
  
     return (
         <div className="home">
-            <BlogList blogs={ blogs } title="My blog List"/>
+            <BlogList blogs={ blogs } handleDelete={handleDelete} title="All Blogs"/>
+            <BlogList blogs={ blogs.filter((blog) => blog.author === 'me') } handleDelete={handleDelete} title="Blogs by me"/>
         </div>
     )
 }
