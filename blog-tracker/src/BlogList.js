@@ -5,7 +5,8 @@ const BlogList = ({ blogs, title = 'Blog List' }) => {
     return (
         <div className="blog-list">
             <h2>{title}</h2>
-            {blogs.map((blog) => {
+            {(!blogs || !blogs.length) && <p className="blog-preview">No blogs available</p>}
+            {(blogs && blogs.length > 0) && blogs.map((blog) => {
                 /**
                  * When mapping a list, each HTML output must have a key property
                  * so that React can keep track of it in the DOM
@@ -16,8 +17,8 @@ const BlogList = ({ blogs, title = 'Blog List' }) => {
                             {blog.title}
                         </Link>
                     </h2>
-                    <p className="blog-description">{blog.body}</p>
-                    <p><em>Written by {blog.author}</em></p>
+                    <p className="blog-description">Summary: {blog.body}</p>
+                    <p><em>-Written by {blog.author === 'currentUser' ? 'Me' : blog.author}</em></p>
                 </div>
             })}
         </div>

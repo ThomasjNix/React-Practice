@@ -136,6 +136,6 @@
   cursor: pointer;
 }
 
-.create button[disabled] {
+button[disabled] {
   background-color: grey;
 }

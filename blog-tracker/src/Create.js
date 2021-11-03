@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('randomPerson1');
+    const [author, setAuthor] = useState('currentUser');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -80,6 +80,7 @@ const Create = () => {
                 disabled={isLoading}
                 value={author}
                 onChange={(event) => setAuthor(event.target.value)}>
+                    <option value="currentUser">Me</option>
                     <option value="randomPerson1">Random Person 1</option>
                     <option value="randomPerson2">Random Person 2</option>
                     <option value="randomPerson3">Random Person 3</option>

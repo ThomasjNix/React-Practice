@@ -1,100 +1,16 @@
 {
   "blogs": [
     {
-      "title": "Example title 1",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt quis turpis eu facilisis. In pulvinar ornare justo sed scelerisque. Sed vitae interdum urna. Donec placerat, metus eget accumsan sodales, leo odio pulvinar elit, id lobortis justo ante sed ante. Maecenas vel justo in dui luctus lacinia in sed erat. Aliquam vulputate, mauris vulputate egestas accumsan, odio ante varius nisi, eget mollis lacus leo ut nulla. Vivamus enim metus, gravida eu dui rutrum, auctor vehicula risus. Suspendisse sollicitudin hendrerit aliquet. Vestibulum eget elit neque. Duis molestie diam sit amet porttitor faucibus. Donec sit amet libero eu eros accumsan pulvinar. Fusce elit augue, dignissim in arcu sit amet, convallis pulvinar leo. Ut imperdiet elit ac tincidunt pellentesque. Donec lacus felis, egestas ac sodales a, vulputate ut metus. ",
-      "author": "me",
+      "title": "test1",
+      "body": "test2",
+      "author": "randomPerson1",
       "id": 1
     },
     {
-      "title": "Example title 2",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in ipsum ac risus auctor sagittis non ullamcorper erat. Integer sit amet sollicitudin ligula. Donec lacinia nibh mollis nisl pulvinar, non venenatis neque scelerisque. Nulla sit amet rhoncus nulla. Etiam rhoncus velit in ligula accumsan, non tincidunt augue porta. Donec ullamcorper rhoncus erat. Phasellus commodo scelerisque nisi at congue. Suspendisse viverra velit mauris. Aliquam efficitur tortor risus, sit amet pretium nisi pulvinar eget. Maecenas at magna id leo porttitor commodo at eget quam. Maecenas iaculis, nibh ut scelerisque ultrices, est dolor ornare turpis, eget elementum enim justo ut lorem. Etiam sagittis nisl nec neque molestie, vel auctor arcu rutrum. Aenean rhoncus tincidunt risus, quis ultricies magna pulvinar eget. Sed nunc orci, dignissim vel aliquam vitae, suscipit ac odio. Aliquam eleifend et turpis fringilla vehicula. ",
-      "author": "somebody else",
+      "title": "Written by me",
+      "body": "I wrote this",
+      "author": "currentUser",
       "id": 2
-    },
-    {
-      "title": "Example title 3",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere eros sit amet purus ornare, malesuada pulvinar dui euismod. Mauris venenatis ante at felis maximus, sed tincidunt nisl eleifend. Quisque faucibus porttitor felis eu vulputate. Aliquam in ex vehicula purus placerat tincidunt. Nam in sem laoreet, vehicula odio sed, tincidunt erat. Mauris eu ornare odio. Sed nec rutrum diam. Sed non felis mauris. Vivamus tristique risus eget velit tincidunt eleifend. Ut dignissim cursus magna non posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque venenatis, ante vitae mattis maximus, libero magna blandit turpis, quis pulvinar ex augue sit amet felis. Nulla elit risus, condimentum non sagittis quis, feugiat in mauris. Ut imperdiet metus pretium, porttitor est convallis, aliquet urna. Phasellus accumsan in velit eu molestie. Suspendisse sed justo ac ipsum pulvinar placerat. ",
-      "author": "anonymously submitted",
-      "id": 3
-    },
-    {
-      "title": "test",
-      "body": "test2\n",
-      "author": "randomPerson1",
-      "id": 4
-    },
-    {
-      "title": "test",
-      "body": "test2\n",
-      "author": "randomPerson1",
-      "id": 5
-    },
-    {
-      "title": "loading",
-      "body": "loadinggg",
-      "author": "randomPerson1",
-      "id": 6
-    },
-    {
-      "title": "loading",
-      "body": "loadinggg",
-      "author": "randomPerson1",
-      "id": 7
-    },
-    {
-      "title": "fds",
-      "body": "fds",
-      "author": "randomPerson1",
-      "id": 8
-    },
-    {
-      "title": "fds",
-      "body": "fds",
-      "author": "randomPerson1",
-      "id": 9
-    },
-    {
-      "title": "fds",
-      "body": "fds",
-      "author": "randomPerson1",
-      "id": 10
-    },
-    {
-      "title": "disabled add 1",
-      "body": "disabled add 1",
-      "author": "randomPerson1",
-      "id": 11
-    },
-    {
-      "title": "v",
-      "body": "fds",
-      "author": "randomPerson1",
-      "id": 12
-    },
-    {
-      "title": "fsd",
-      "body": "fds",
-      "author": "randomPerson1",
-      "id": 13
-    },
-    {
-      "title": "a",
-      "body": "b",
-      "author": "randomPerson1",
-      "id": 14
-    },
-    {
-      "title": "c",
-      "body": "d",
-      "author": "randomPerson1",
-      "id": 15
-    },
-    {
-      "title": "as",
-      "body": "fds",
-      "author": "randomPerson1",
-      "id": 16
     }
   ]
 }
