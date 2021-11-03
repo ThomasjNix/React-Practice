@@ -69,6 +69,15 @@
 .blog-preview a{
   text-decoration: none;
 }
+.blog-preview .blog-description {
+  max-width: 25ch;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.blog-preview p {
+  margin: 0.5rem 0;
+}
 
 /* blog details page */
 .blog-details h2 {
@@ -86,6 +95,10 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.blog-details p {
+  margin: 1rem 0;
 }
 
 /* create new blog form */

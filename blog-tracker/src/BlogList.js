@@ -16,7 +16,8 @@ const BlogList = ({ blogs, title = 'Blog List' }) => {
                             {blog.title}
                         </Link>
                     </h2>
-                    <p>Written by {blog.author}</p>
+                    <p className="blog-description">{blog.body}</p>
+                    <p><em>Written by {blog.author}</em></p>
                 </div>
             })}
         </div>
