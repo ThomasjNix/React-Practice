@@ -8,26 +8,7 @@ const Home = () => {
      * In this example, useState accepts a value (that is assigned to the destructured name variable)
      * and a function to update that value (that is assigned ot the destructured setName method)
      */
-    const [blogs, setBlogs] = useState([
-        {
-            title: 'Example title 1',
-            body: 'lorem ipsum and a whole lot more',
-            author: 'me',
-            id: 1
-        },
-        {
-            title: 'Example title 2',
-            body: 'lorem ipsum and a that\'s about it',
-            author: 'somebody else',
-            id: 2
-        },
-        {
-            title: 'Example title 3',
-            body: 'lorem ipsum, who needs more?',
-            author: 'anonymously submitted',
-            id: 3
-        }
-    ]);
+    const [blogs, setBlogs] = useState(null);
 
     /**
      * useEffect runs every time there is a re-render, or every time data changes
@@ -37,8 +18,12 @@ const Home = () => {
      * watched for updates and useEffect() will trigger on the updates of those values
      */
     useEffect(() => {
-        console.log('Blogs updated');
-    }, [blogs]);
+        fetch('http://localhost:8000/blogs')
+        .then((res) => res.json())
+        .then((blogs) => {
+            setBlogs(blogs);
+        })
+    }, []);
 
     /**
      * Functions can be passed as props to child components 
@@ -51,8 +36,8 @@ const Home = () => {
  
     return (
         <div className="home">
-            <BlogList blogs={ blogs } handleDelete={handleDelete} title="All Blogs"/>
-            <BlogList blogs={ blogs.filter((blog) => blog.author === 'me') } handleDelete={handleDelete} title="Blogs by me"/>
+            {blogs && <BlogList blogs={ blogs } handleDelete={handleDelete} title="All Blogs"/>}
+            {blogs && <BlogList blogs={ blogs.filter((blog) => blog.author === 'me') } handleDelete={handleDelete} title="Blogs by me"/>}
         </div>
     )
 }

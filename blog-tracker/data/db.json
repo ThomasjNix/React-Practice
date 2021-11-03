@@ -1,0 +1,22 @@
+{
+    "blogs": [
+        {
+            "title": "Example title 1",
+            "body": "lorem ipsum and a whole lot more",
+            "author": "me",
+            "id": 1
+        },
+        {
+            "title": "Example title 2",
+            "body": "lorem ipsum and a that\"s about it",
+            "author": "somebody else",
+            "id": 2
+        },
+        {
+            "title": "Example title 3",
+            "body": "lorem ipsum, who needs more?",
+            "author": "anonymously submitted",
+            "id": 3
+        }
+    ]
+}
