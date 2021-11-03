@@ -10,8 +10,8 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
   margin: 0 auto;
+  width: 80vw;
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
@@ -32,6 +32,11 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+}
+
+.home {
+  width: 80vw;
+  margin: 2vh auto;
 }
 
 /* blog previews / list */
