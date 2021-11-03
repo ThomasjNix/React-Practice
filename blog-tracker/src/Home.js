@@ -9,6 +9,8 @@ const Home = () => {
      * and a function to update that value (that is assigned ot the destructured setName method)
      */
     const [blogs, setBlogs] = useState(null);
+    const [isLoading, setIsLoading] = useState(true); 
+    const [error, setError] = useState(null);
 
     /**
      * useEffect runs every time there is a re-render, or every time data changes
@@ -18,26 +20,34 @@ const Home = () => {
      * watched for updates and useEffect() will trigger on the updates of those values
      */
     useEffect(() => {
-        fetch('http://localhost:8000/blogs')
-        .then((res) => res.json())
+        // Just to demo the loading behavior
+        setTimeout(() => {
+            fetch('http://localhost:8000/blogs')
+        .then((res) => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw new Error('Failed to fetch requested resources.');
+            }
+        })
         .then((blogs) => {
             setBlogs(blogs);
+            setIsLoading(false);
+            setError(null);
         })
+        .catch((err) => {
+            setError(err.message);
+            setIsLoading(false);
+        })
+        }, 1000);
     }, []);
-
-    /**
-     * Functions can be passed as props to child components 
-     * This allows values on the parent component to be modified
-     * through the child component via closure
-     */
-     const handleDelete = (id) => {
-        setBlogs(blogs.filter((blog) => blog.id !== id));
-    }
  
     return (
         <div className="home">
-            {blogs && <BlogList blogs={ blogs } handleDelete={handleDelete} title="All Blogs"/>}
-            {blogs && <BlogList blogs={ blogs.filter((blog) => blog.author === 'me') } handleDelete={handleDelete} title="Blogs by me"/>}
+            {isLoading && <div className="loading">Loading...</div>}
+            { error && <div className="error">An unexpected error occured: { error }</div>}
+            {!isLoading && blogs && <BlogList blogs={ blogs } title="All Blogs"/>}
+            {!isLoading && blogs && <BlogList blogs={ blogs.filter((blog) => blog.author === 'me') }title="Blogs by me"/>}
         </div>
     )
 }
