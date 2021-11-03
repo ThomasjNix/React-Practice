@@ -36,7 +36,7 @@ const useFetch = (endpoint) => {
                     setError(err.message);
                     setIsLoading(false);
                 })
-        }, 1000);
+        }, 500);
     }, []);
 
     /**
