@@ -17,9 +17,16 @@ const useFetch = (endpoint) => {
      * watched for updates and useEffect() will trigger on the updates of those values
      */
     useEffect(() => {
-        // Just to demo the loading behavior
+        /**
+         * Use an abort controller to prevent fetch from running on an unmounted component
+         * providing the option signal: abortController.signal associates the 
+         * fetch to the AbortController
+         */
+        const abortController = new AbortController();
+
+        // Using setTimeout to mimic API call
         setTimeout(() => {
-            fetch(endpoint)
+            fetch(endpoint, { signal: abortController.signal })
                 .then((res) => {
                     if (res.ok) {
                         return res.json();
@@ -33,11 +40,19 @@ const useFetch = (endpoint) => {
                     setError(null);
                 })
                 .catch((err) => {
-                    setError(err.message);
-                    setIsLoading(false);
+                    // Do not update state if error is from AbortController
+                    if (err.name === 'AbortError') {
+                        console.log('Fetch aborted');
+                    } else {
+                        setError(err.message);
+                        setIsLoading(false);
+                    }
                 })
         }, 500);
-    }, []);
+
+        // Abort the associated fetch
+        return () => abortController.abort();
+    }, [endpoint]);
 
     /**
      * Return all of the data associated with the request

@@ -19,7 +19,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
  */
 
 function App() {
-  const title = 'Blog Tracker';
   return (
     <Router>
       <div className="App">
