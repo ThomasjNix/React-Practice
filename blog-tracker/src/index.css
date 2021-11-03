@@ -58,8 +58,13 @@
 }
 .blog-preview h2 {
   font-size: 20px;
-  color: #f1356d;
   margin-bottom: 8px;
+}
+.blog-preview h2 a {
+  color: #f1356d;
+}
+.blog-preview h2 a:hover {
+  color: #911e41;
 }
 .blog-preview a{
   text-decoration: none;

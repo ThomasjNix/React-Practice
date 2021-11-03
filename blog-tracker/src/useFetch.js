@@ -48,7 +48,7 @@ const useFetch = (endpoint) => {
                         setIsLoading(false);
                     }
                 })
-        }, 500);
+        }, 250);
 
         // Abort the associated fetch
         return () => abortController.abort();
